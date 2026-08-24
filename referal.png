@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <!-- Gradients for Megaphone -->
+    <linearGradient id="hornYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD642"/>
+      <stop offset="50%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#FF8F00"/>
+    </linearGradient>
+    <linearGradient id="hornHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9C4" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFF9C4" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="blueStripes" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="cyanAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67E8F9"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="userSilhouette" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#1E293B" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Orbital connecting lines with arrows -->
+  <g stroke="#CBD5E1" stroke-width="3.5" fill="none" opacity="0.65" stroke-linecap="round">
+    <!-- Top curve -->
+    <path d="M 120,110 C 220,35 280,35 380,110" />
+    <path d="M 255,42 L 245,47 L 255,54" fill="none" stroke-width="3" />
+    
+    <!-- Right curve -->
+    <path d="M 410,135 C 470,225 470,275 410,365" />
+    <path d="M 458,255 L 452,245 L 446,255" fill="none" stroke-width="3" />
+
+    <!-- Bottom curve -->
+    <path d="M 380,390 C 280,465 220,465 120,390" />
+    <path d="M 245,458 L 255,453 L 245,446" fill="none" stroke-width="3" />
+
+    <!-- Left curve -->
+    <path d="M 90,365 C 30,275 30,225 90,135" />
+    <path d="M 42,245 L 48,255 L 54,245" fill="none" stroke-width="3" />
+  </g>
+
+  <!-- 4 Corner Referral User Avatars -->
+  <!-- Top Left User -->
+  <g transform="translate(40, 40)" filter="url(#softGlow)">
+    <circle cx="55" cy="55" r="50" fill="url(#avatarBg)"/>
+    <circle cx="55" cy="55" r="38" fill="#7DD3FC" opacity="0.8"/>
+    <!-- Person Icon -->
+    <circle cx="55" cy="42" r="14" fill="url(#userSilhouette)"/>
+    <path d="M 29,82 C 30,64 42,60 55,60 C 68,60 80,64 81,82 Z" fill="url(#userSilhouette)"/>
+  </g>
+
+  <!-- Top Right User -->
+  <g transform="translate(350, 40)" filter="url(#softGlow)">
+    <circle cx="55" cy="55" r="50" fill="url(#avatarBg)"/>
+    <circle cx="55" cy="55" r="38" fill="#7DD3FC" opacity="0.8"/>
+    <!-- Person Icon -->
+    <circle cx="55" cy="42" r="14" fill="url(#userSilhouette)"/>
+    <path d="M 29,82 C 30,64 42,60 55,60 C 68,60 80,64 81,82 Z" fill="url(#userSilhouette)"/>
+  </g>
+
+  <!-- Bottom Left User -->
+  <g transform="translate(40, 350)" filter="url(#softGlow)">
+    <circle cx="55" cy="55" r="50" fill="url(#avatarBg)"/>
+    <circle cx="55" cy="55" r="38" fill="#7DD3FC" opacity="0.8"/>
+    <!-- Person Icon -->
+    <circle cx="55" cy="42" r="14" fill="url(#userSilhouette)"/>
+    <path d="M 29,82 C 30,64 42,60 55,60 C 68,60 80,64 81,82 Z" fill="url(#userSilhouette)"/>
+  </g>
+
+  <!-- Bottom Right User -->
+  <g transform="translate(350, 350)" filter="url(#softGlow)">
+    <circle cx="55" cy="55" r="50" fill="url(#avatarBg)"/>
+    <circle cx="55" cy="55" r="38" fill="#7DD3FC" opacity="0.8"/>
+    <!-- Person Icon -->
+    <circle cx="55" cy="42" r="14" fill="url(#userSilhouette)"/>
+    <path d="M 29,82 C 30,64 42,60 55,60 C 68,60 80,64 81,82 Z" fill="url(#userSilhouette)"/>
+  </g>
+
+  <!-- Center Megaphone Speaker Illustration -->
+  <g transform="translate(130, 90)" filter="url(#softGlow)">
+    <!-- Back Cord / Handle -->
+    <path d="M 90,240 C 90,260 110,275 140,265 C 160,260 165,245 155,230" fill="none" stroke="#CBD5E1" stroke-width="12" stroke-linecap="round"/>
+    <rect x="75" y="200" width="30" height="40" rx="8" transform="rotate(-38 90 220)" fill="#F97316"/>
+
+    <!-- Throat / Blue Barrel of Megaphone -->
+    <g transform="rotate(-38 120 180)">
+      <!-- Base cylinder -->
+      <rect x="50" y="145" width="85" height="60" rx="14" fill="url(#blueStripes)"/>
+      <rect x="42" y="140" width="16" height="70" rx="6" fill="#1E3A8A"/>
+      
+      <!-- Cyan & White highlight bands -->
+      <rect x="75" y="145" width="14" height="60" fill="url(#cyanAccent)"/>
+      <rect x="105" y="145" width="10" height="60" fill="#E0F2FE"/>
+      
+      <!-- Dark joint band -->
+      <rect x="125" y="138" width="18" height="74" rx="6" fill="#1E293B"/>
+    </g>
+
+    <!-- Main Yellow Megaphone Cone Body -->
+    <g transform="rotate(-38 120 180)">
+      <path d="M 135,142 L 230,105 C 242,100 252,112 252,125 L 252,225 C 252,238 242,250 230,245 L 135,208 Z" fill="url(#hornYellow)" stroke="#F59E0B" stroke-width="2"/>
+      
+      <!-- Glossy highlight streak -->
+      <path d="M 140,150 L 225,115 L 225,145 L 140,165 Z" fill="url(#hornHighlight)"/>
+
+      <!-- Front Red / Pink Cap Opening -->
+      <ellipse cx="248" cy="175" rx="14" ry="58" fill="#EF4444"/>
+      <ellipse cx="245" cy="175" rx="9" ry="46" fill="#F87171"/>
+      <ellipse cx="242" cy="175" rx="5" ry="30" fill="#FFE4E6"/>
+    </g>
+  </g>
+</svg>

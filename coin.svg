@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450" width="500" height="450">
+  <defs>
+    <!-- 3D Gold Top Gradient -->
+    <linearGradient id="goldFaceTop" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFF385"/>
+      <stop offset="25%" stop-color="#FFD700"/>
+      <stop offset="60%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+
+    <!-- Coin Side Rim Gradients (3D Extrusion) -->
+    <linearGradient id="goldRimSide" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#92400E"/>
+      <stop offset="20%" stop-color="#D97706"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="75%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+
+    <!-- Embossed NFT Text Gradient -->
+    <linearGradient id="nftTextGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="30%" stop-color="#FEF08A"/>
+      <stop offset="70%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#92400E"/>
+    </linearGradient>
+
+    <!-- Bevel Highlights -->
+    <linearGradient id="bevelLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#FFD700" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#78350F" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <filter id="stackShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#451A03" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Ground Shadow -->
+  <ellipse cx="250" cy="385" rx="210" ry="35" fill="#451A03" opacity="0.2" filter="blur(8px)"/>
+
+  <!-- ================= COIN 1 (BOTTOM LEFT) ================= -->
+  <g transform="translate(0, 10)" filter="url(#stackShadow)">
+    <!-- Extrusion / Rim -->
+    <path d="M 45,260 
+             C 45,310 135,345 245,345 
+             C 355,345 445,310 445,260 
+             L 445,290 
+             C 445,340 355,375 245,375 
+             C 135,375 45,340 45,290 Z" 
+          fill="url(#goldRimSide)" stroke="#78350F" stroke-width="2"/>
+    
+    <!-- Vertical Ribbing Lines on Edge -->
+    <g stroke="#78350F" stroke-width="2" opacity="0.6">
+      <line x1="90" y1="285" x2="90" y2="315" />
+      <line x1="140" y1="305" x2="140" y2="335" />
+      <line x1="190" y1="315" x2="190" y2="345" />
+      <line x1="245" y1="318" x2="245" y2="348" />
+    </g>
+
+    <!-- Top Face -->
+    <ellipse cx="245" cy="260" rx="200" ry="85" fill="url(#goldFaceTop)" stroke="#FFFBEB" stroke-width="3"/>
+    <ellipse cx="245" cy="260" rx="180" ry="72" fill="none" stroke="#B45309" stroke-width="4" opacity="0.6"/>
+  </g>
+
+  <!-- ================= COIN 2 (BOTTOM RIGHT - PROMINENT NFT) ================= -->
+  <g transform="translate(45, 20)" filter="url(#stackShadow)">
+    <!-- 3D Rim Extrusion -->
+    <path d="M 175,280 
+             C 175,325 240,355 330,355 
+             C 420,355 485,325 485,280 
+             L 485,315 
+             C 485,360 420,390 330,390 
+             C 240,390 175,360 175,315 Z" 
+          fill="url(#goldRimSide)" stroke="#78350F" stroke-width="2"/>
+    
+    <!-- Ribbing Lines on Right Coin -->
+    <g stroke="#78350F" stroke-width="2" opacity="0.5">
+      <line x1="230" y1="320" x2="230" y2="355" />
+      <line x1="280" y1="335" x2="280" y2="370" />
+      <line x1="330" y1="340" x2="330" y2="375" />
+      <line x1="390" y1="335" x2="390" y2="370" />
+      <line x1="440" y1="320" x2="440" y2="355" />
+    </g>
+
+    <!-- Top Face -->
+    <ellipse cx="330" cy="280" rx="155" ry="75" fill="url(#goldFaceTop)" stroke="#FFFBEB" stroke-width="4"/>
+    <ellipse cx="330" cy="280" rx="138" ry="62" fill="none" stroke="#D97706" stroke-width="4"/>
+    
+    <!-- Bold Embossed 3D "NFT" Text on Coin 2 -->
+    <!-- Text Shadow (3D depth) -->
+    <text x="330" y="306" text-anchor="middle" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-size="68" fill="#78350F" letter-spacing="4" transform="skewX(-14) scale(1, 0.72)">NFT</text>
+    <!-- Text Face -->
+    <text x="330" y="300" text-anchor="middle" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-size="68" fill="url(#nftTextGrad)" stroke="#FFFBEB" stroke-width="2" letter-spacing="4" transform="skewX(-14) scale(1, 0.72)">NFT</text>
+  </g>
+
+  <!-- ================= COIN 3 (TOP CENTER - MAIN SHINY COIN) ================= -->
+  <g transform="translate(0, -35)" filter="url(#stackShadow)">
+    <!-- 3D Rim Extrusion -->
+    <path d="M 85,150 
+             C 85,195 160,230 260,230 
+             C 360,230 435,195 435,150 
+             L 435,185 
+             C 435,230 360,265 260,265 
+             C 160,265 85,230 85,185 Z" 
+          fill="url(#goldRimSide)" stroke="#78350F" stroke-width="2.5"/>
+    
+    <!-- Edge Ribbing Details -->
+    <g stroke="#78350F" stroke-width="2" opacity="0.6">
+      <line x1="125" y1="180" x2="125" y2="215" />
+      <line x1="170" y1="198" x2="170" y2="233" />
+      <line x1="215" y1="210" x2="215" y2="245" />
+      <line x1="260" y1="215" x2="260" y2="250" />
+      <line x1="310" y1="210" x2="310" y2="245" />
+      <line x1="360" y1="198" x2="360" y2="233" />
+      <line x1="400" y1="180" x2="400" y2="215" />
+    </g>
+
+    <!-- Top Glossy Face -->
+    <ellipse cx="260" cy="150" rx="175" ry="80" fill="url(#goldFaceTop)" stroke="#FFFBEB" stroke-width="5"/>
+    <ellipse cx="260" cy="150" rx="155" ry="68" fill="none" stroke="url(#bevelLight)" stroke-width="6"/>
+    <ellipse cx="260" cy="150" rx="146" ry="62" fill="none" stroke="#B45309" stroke-width="2.5" opacity="0.7"/>
+
+    <!-- Bold Embossed 3D "NFT" on Top Coin -->
+    <!-- 3D Shadow Extrusion for Letters -->
+    <text x="260" y="180" text-anchor="middle" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-size="82" fill="#78350F" letter-spacing="5" transform="skewX(-12) scale(1, 0.72)">NFT</text>
+    <text x="260" y="176" text-anchor="middle" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-size="82" fill="#B45309" letter-spacing="5" transform="skewX(-12) scale(1, 0.72)">NFT</text>
+    <!-- Top Face of NFT -->
+    <text x="260" y="170" text-anchor="middle" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-size="82" fill="url(#nftTextGrad)" stroke="#FFFBEB" stroke-width="2.5" letter-spacing="5" transform="skewX(-12) scale(1, 0.72)">NFT</text>
+
+    <!-- Glossy Specular Sheen Arc -->
+    <path d="M 140,130 C 180,95 320,95 380,130" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  </g>
+</svg>

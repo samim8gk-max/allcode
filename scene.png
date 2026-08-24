@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+  <!-- Corner Frame Brackets -->
+  <path d="M40 140 V50 H130 V90 H80 V140 H40 Z"/>
+  <path d="M472 140 V50 H382 V90 H432 V140 H472 Z"/>
+  <path d="M40 372 V462 H130 V422 H80 V372 H40 Z"/>
+  <path d="M472 372 V462 H382 V422 H432 V372 H472 Z"/>
+  <!-- Top Left Position Block -->
+  <path d="M120 120 H240 V240 H120 Z M150 150 V210 H210 V150 Z M170 170 H190 V190 H170 Z"/>
+  <!-- Top Right Position Block -->
+  <path d="M272 120 H392 V240 H272 Z M302 150 V210 H362 V150 Z M322 170 H342 V190 H322 Z"/>
+  <!-- Bottom Left Position Block -->
+  <path d="M120 272 H240 V392 H120 Z M150 302 V362 H210 V302 Z M170 322 H190 V342 H170 Z"/>
+  <!-- Bottom Right Pattern Modules -->
+  <path d="M272 272 H322 V322 H272 Z"/>
+  <path d="M342 272 H392 V322 H342 Z"/>
+  <path d="M272 342 H322 V392 H272 Z"/>
+  <path d="M342 342 H392 V392 H342 Z"/>
+  <path d="M300 300 H360 V360 H300 Z"/>
+</svg>

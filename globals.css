@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --primary-theme: #6495ED;
+  --primary-theme-hover: #4f82e0;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ripplePulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.animate-ripple {
+  animation: ripplePulse 2s infinite ease-out;
+}
+
+/* #6495ED Theme Utility Overrides */
+.bg-theme-primary {
+  background-color: #6495ED !important;
+}
+
+.hover\:bg-theme-primary-hover:hover {
+  background-color: #4f82e0 !important;
+}
+
+.border-theme-primary {
+  border-color: #6495ED !important;
+}
+
+.text-theme-primary {
+  color: #6495ED !important;
+}

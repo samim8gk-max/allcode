@@ -1,0 +1,81 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User account and wallet data",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase user ID" },
+        "name": { "type": "string", "description": "Full name of the user", "maxLength": 100 },
+        "mobile": { "type": "string", "description": "Mobile phone number", "maxLength": 20 },
+        "gmail": { "type": "string", "description": "Gmail / Email address", "maxLength": 100 },
+        "password": { "type": "string", "description": "User account password", "maxLength": 100 },
+        "balance": { "type": "string", "description": "Current wallet coin balance string e.g. 0", "maxLength": 50 },
+        "status": { "type": "string", "description": "Status e.g. pending or verified", "maxLength": 50 },
+        "account": { "type": "string", "description": "Account condition e.g. active", "maxLength": 50 },
+        "registration_date": { "type": "string", "description": "Registration ISO timestamp string", "maxLength": 100 },
+        "profile_picture": { "type": "string", "description": "Profile picture avatar URL", "maxLength": 500 }
+      },
+      "required": ["uid", "name", "mobile", "gmail", "password", "balance", "status", "account", "registration_date"]
+    },
+    "Transaction": {
+      "title": "Coin Transaction",
+      "description": "Coin transfer or payment record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "senderUid": { "type": "string" },
+        "senderName": { "type": "string" },
+        "receiverMobileOrEmail": { "type": "string" },
+        "receiverName": { "type": "string" },
+        "amount": { "type": "number" },
+        "type": { "type": "string", "enum": ["send", "receive", "add", "recharge", "referral", "settlement"] },
+        "title": { "type": "string" },
+        "status": { "type": "string", "enum": ["success", "pending", "failed"] },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["senderUid", "receiverMobileOrEmail", "amount", "type", "status", "timestamp"]
+    },
+    "ContactSupport": {
+      "title": "Customer Care Contact",
+      "description": "Customer support contact channels stored in Firestore",
+      "type": "object",
+      "properties": {
+        "mobile": { "type": "string", "description": "Mobile support number" },
+        "gmail": { "type": "string", "description": "Gmail support address" },
+        "telegram": { "type": "string", "description": "Telegram channel link" },
+        "youtube": { "type": "string", "description": "YouTube channel link" }
+      },
+      "required": ["mobile", "gmail", "telegram", "youtube"]
+    },
+    "BestOffer": {
+      "title": "Best Offer Banner",
+      "description": "Marketing offers and banners displayed in the home slider",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique offer banner ID" },
+        "image": { "type": "string", "description": "Banner image URL" },
+        "url": { "type": "string", "description": "Redirection target URL link when clicked" }
+      },
+      "required": ["image"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "Users collection storing member profiles and coin balances"
+    },
+    "/transactions/{transactionId}": {
+      "schema": { "$ref": "#/entities/Transaction" },
+      "description": "Transactions history collection for coin transfers"
+    },
+    "/contact/{contactId}": {
+      "schema": { "$ref": "#/entities/ContactSupport" },
+      "description": "Customer care support information channels"
+    },
+    "/bestoffer/{offerId}": {
+      "schema": { "$ref": "#/entities/BestOffer" },
+      "description": "Slider offers and banners shown on home screen"
+    }
+  }
+}
